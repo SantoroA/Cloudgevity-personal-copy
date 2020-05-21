@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Muli:wght@300;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e7e93bbeb3.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Cloudgevity</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="main shadow-sm">
+        <!-- popular cities -->
+        <div class="row cities">
+          <div class="col-3 text-center">
+            <a href="#" class="city-link" id="london-link">London</a>
+          </div>
+          <div class="col-3 text-center">
+            <a href="#" class="city-link" id="paris-link">Paris</a>
+          </div>
+          <div class="col-3 text-center">
+            <a href="#" class="city-link" id="rome-link">Rome</a>
+          </div>
+          <div class="col-3 text-center">
+            <a href="#" class="city-link" id="new-york-link">New York</a>
+          </div>
+        </div>
+
+        <!-- search location  -->
+
+        <div class="row my-4">
+          <div class="col-2 text-center">
+            <div class="row text-center">
+              <button
+                type="submit"
+                class="btn btn-dark d-block m-auto shadow-sm"
+                id="button-current-city"
+              >
+                <i class="fas fa-map-marker-alt"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-10">
+            <form id="search-city-form">
+              <div class="row">
+                <div class="col-9 align-items-center d-flex">
+                  <input
+                    type="search"
+                    class="form-control"
+                    id="city-input"
+                    autocomplete="off"
+                    autofocus="on"
+                    placeholder="Enter a City"
+                  />
+                </div>
+                <div class="col-3 text-center">
+                  <button
+                    type="submit"
+                    class="btn btn-dark d-block m-auto shadow-sm"
+                    id="button-search-city"
+                  >
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- current city -->
+        <h1 class="text-center" id="current-city"></h1>
+
+        <!-- main info -->
+        <div class="row justify-content-center mt-4 mb-5">
+          <div class="col-4">
+            <img class="weather-app-icon" id="weather-icon" src="" alt="" />
+          </div>
+
+          <div class="col-4 justify-content-center align-items-center">
+            <div class="row mt-4">
+              <div class="col-6 mr-0 p-0">
+                <p class="temperature" id="temperature-element"></p>
+              </div>
+
+              <div class="col-6 p-0">
+                <a class="active" id="switch-to-celsius" href="#">°C</a>
+                |
+                <a class="inactive" id="switch-to-fahrenheit" href="#">°F</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- secondary info -->
+        <div class="row secondary-info">
+          <div class="col-3 divider">
+            <div class="text-center" id="week-day"></div>
+            <div class="text-center" id="time"></div>
+          </div>
+          <div
+            class="col-3 divider align-items-center d-flex justify-content-center"
+          >
+            <div class="text-center description" id="weather-description"></div>
+          </div>
+          <div class="col-3 divider text-center">
+            Wind Speed
+            <div class="text-center" id="wind-speed"></div>
+          </div>
+          <div class="col-3 text-center align-self-center">
+            Humidity
+            <div class="text-center" id="humidity"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- forecast -->
+      <section class="forecast shadow-sm">
+        <div class="row justify-content-around" id="forecast"></div>
+      </section>
+      <p class="text-center small">
+        This website was coded by Aline Santoro and is open-sourced on
+        <a href="https://github.com/SantoroA/Cloudgevity2">GitHub</a> and hosted
+        on
+        <a
+          href="https://app.netlify.com/sites/flamboyant-carson-d0838b/overview"
+          >Netlify</a
+        >.
+      </p>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
