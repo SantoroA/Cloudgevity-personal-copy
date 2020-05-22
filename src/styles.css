@@ -97,6 +97,10 @@ h1 {
   border-radius: 8px;
   text-decoration: none;
 }
+.info-box {
+  border: 1px solid rgb(250, 246, 246);
+  border-radius: 8px;
+}
 
 .active {
   color: #584153;

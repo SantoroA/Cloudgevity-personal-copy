@@ -40,7 +40,7 @@ function formatForecast(response) {
   for (let i = 0; i < 40; i += 8) {
     forecast = response.data.list[i];
     forecastElement.innerHTML += `
-        <div class="col-4 col-md-2 mb-4 mb-md-0 forecast-info">
+        <div class="col-3 shadow-sm col-md-2 mb-4 mb-md-0 mx-md-0 mx-1 info-box forecast-info">
           <p class="text-center forecast-week-day mb-1">
           ${formaForecastWeekDay(forecast.dt * 1000)}  
           </p>
